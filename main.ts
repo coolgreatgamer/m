@@ -195,6 +195,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
         huh.setVelocity(0, 0)
         weiuji.setVelocity(0, -50)
         music.play(music.createSoundEffect(WaveShape.Square, 1, 1220, 83, 83, 2000, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.InBackground)
+        info.setLife(2)
         info.changeScoreBy(1)
         block_used = 1
     } else {
@@ -470,3 +471,4 @@ huh = sprites.create(img`
 scaling.scaleToPixels(huh, 24, ScaleDirection.Horizontally, ScaleAnchor.Middle)
 scaling.scaleToPixels(huh, 24, ScaleDirection.Vertically, ScaleAnchor.Middle)
 huh.setPosition(96, 64)
+info.setLife(1)
